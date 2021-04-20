@@ -26,7 +26,7 @@ public class Indumentaria extends producto {
 		this.genero = genero;
 	}
 	public Indumentaria(String nombre, int precio, int id, String color, String talla, String genero) {
-		super(nombre, precio, id);
+		super(nombre,precio,id);
 		this.color = color;
 		this.talla = talla;
 		this.genero = genero;

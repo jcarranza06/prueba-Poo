@@ -11,4 +11,9 @@ public class Carrito {
 	public void setLista_productos(List<Producto> lista_productos) {
 		this.lista_productos = lista_productos;
 	}
+	@Override
+	public String toString() {
+		return "Carrito [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
 }
