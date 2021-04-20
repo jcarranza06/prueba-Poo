@@ -10,8 +10,8 @@ public class Proteccion extends Equipamento {
 	public void setMaterial(String material) {
 		this.material = material;
 	}
-	public Proteccion(String nombre, int precio, int id, String material) {
-		super(nombre, precio, id);
+	public Proteccion(String nombre, int precio, int id, String material, String segmento_deportivo) {
+		super(nombre, precio, id, segmento_deportivo);
 		this.material = material;
 	}
 

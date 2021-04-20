@@ -1,4 +1,5 @@
 package datos;
+//import datos.Indumentaria;
 
 public class Accesorios extends Indumentaria{
 	
@@ -8,8 +9,8 @@ public class Accesorios extends Indumentaria{
 
 	@Override
 	public String toString() {
-		return " + getColor() + ", getTalla()=" + getTalla() + ", getGenero()=" + getGenero()
-				+ ", toString()=" + super.toString() + ", getNombre()=" + getNombre() + ", getPrecio()=" + getPrecio()
+		return " + getColor() + " + getTalla() +" + getTalla() + " + getGenero() +" + getGenero() "+
+				", toString()=" + super.toString() + ", getNombre()=" + getNombre() + ", getPrecio()=" + getPrecio()
 				+ ", getId()=" + getId() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
 	}
 	

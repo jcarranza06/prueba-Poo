@@ -1,6 +1,6 @@
 package datos;
 
-public class Indumentaria extends producto {
+public class Indumentaria extends Producto {
 	private String color;
 	private String talla;
 	private String genero;

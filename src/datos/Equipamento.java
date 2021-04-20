@@ -1,6 +1,6 @@
 package datos;
 
-public class Equipamento extends producto{
+public class Equipamento extends Producto{
 	
 	private String segmento_deportivo;
 
