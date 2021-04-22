@@ -1,6 +1,9 @@
 package Interfaz;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import datos.Producto;
 
 public class Principal {
 	
@@ -22,8 +25,20 @@ public class Principal {
 		int elegido = sc.nextInt();
 		return elegido;      
     }
-	public static void consultarProductos() {
-		System.out.println("en construcción");
+	public static void consultarProductos(ArrayList<Producto> productos) {
+		System.out.println("Productos:");
+		int c = 0;
+		for (Producto i: productos) {
+			System.out.println("-" +c+ ". " + i.getNombre());
+			c++;};
+	}
+	public static void consultarProductos(ArrayList<Producto> productos, int i) {
+		System.out.print("El producto es:");
+		System.out.println(productos.get(i));
+	}
+	public static void menuConsultarProductoEspecifico() {
+		System.out.println();
+        System.out.println("Escriba el numero del producto que quiere consultar");
 	}
 	public static void menuConsulta() {
 		System.out.println();

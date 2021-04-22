@@ -10,7 +10,7 @@ public class Transporte extends Equipamento {
 	public void setVehiculo(String vehiculo) {
 		this.vehiculo = vehiculo;
 	}
-	public Transporte(String nombre, int precio, int id, String segmento_deportivo, String vehiculo) {
+	public Transporte(String nombre, int precio, int id, Deporte segmento_deportivo, String vehiculo) {
 		super(nombre, precio, id, segmento_deportivo);
 		this.vehiculo = vehiculo;
 	}

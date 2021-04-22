@@ -10,7 +10,7 @@ public class Implemento extends Equipamento {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	public Implemento(String nombre, int precio, int id, String segmento_deportivo, String marca) {
+	public Implemento(String nombre, int precio, int id, Deporte segmento_deportivo, String marca) {
 		super(nombre, precio, id, segmento_deportivo);
 		this.marca = marca;
 	}

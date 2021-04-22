@@ -16,6 +16,12 @@ public class Deporte {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	
+	
+	public Deporte(String nombre, String categoria) {
+		this.nombre = nombre;
+		this.categoria = categoria;
+	}
 	@Override
 	public String toString() {
 		return "Deporte [nombre=" + nombre + ", categoria=" + categoria + ", getNombre()=" + getNombre()
