@@ -21,20 +21,28 @@ public class Principal {
 	}
 	
 	public static int EntradaMenu (){
-        Scanner sc = new Scanner(System.in);
-		int elegido = sc.nextInt();
-		return elegido;      
+        try {
+        	Scanner sc = new Scanner(System.in);
+        	int elegido = sc.nextInt();
+        	return elegido;}
+        catch (Exception e) {
+        	return -1;
+        }
     }
 	public static void consultarProductos(ArrayList<Producto> productos) {
 		System.out.println("Productos:");
 		int c = 0;
 		for (Producto i: productos) {
-			System.out.println("-" +c+ ". " + i.getNombre());
+			System.out.println(" " +(c+1)+ ". " + i.getNombre());
 			c++;};
 	}
 	public static void consultarProductos(ArrayList<Producto> productos, int i) {
-		System.out.print("El producto es:");
-		System.out.println(productos.get(i));
+		try {
+		System.out.println("El producto es:");
+		System.out.println(productos.get(i-1));
+		} catch (Exception e) {
+			mostrarError();
+		}
 	}
 	public static void menuConsultarProductoEspecifico() {
 		System.out.println();
