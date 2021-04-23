@@ -35,9 +35,7 @@ public class Indumentaria extends Producto {
 	
 	@Override
 	public String toString() {
-		return "Indumentaria [color=" + color + ", talla=" + talla + ", genero=" + genero + ", getColor()=" + getColor()
-				+ ", getTalla()=" + getTalla() + ", getGenero()=" + getGenero() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id: "+ getId() +"\n"+ "Color: "+ getColor()+"\n"+ "Talla: "+getTalla()+"\n"+ "Genero: "+ getGenero();
 	}
 
 }

@@ -7,9 +7,7 @@ public class Tren_superior extends Indumentaria{
 
 	@Override
 	public String toString() {
-		return "Tren_superior [getColor()=" + getColor() + ", getTalla()=" + getTalla() + ", getGenero()=" + getGenero()
-				+ ", toString()=" + super.toString() + ", getNombre()=" + getNombre() + ", getPrecio()=" + getPrecio()
-				+ ", getId()=" + getId() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id: "+ getId() +"\n"+ "Color: "+ getColor()+"\n"+ "Talla: "+getTalla()+"\n"+ "Genero: "+ getGenero();
 	}
 
 }

@@ -24,9 +24,7 @@ public class Deporte {
 	}
 	@Override
 	public String toString() {
-		return "Deporte [nombre=" + nombre + ", categoria=" + categoria + ", getNombre()=" + getNombre()
-				+ ", getCategoria()=" + getCategoria() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "Nombre: " + getNombre()+ "Categoria: "+ getCategoria();
 	}
 
 }

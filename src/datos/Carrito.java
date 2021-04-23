@@ -21,7 +21,6 @@ public class Carrito {
 	}
 	@Override
 	public String toString() {
-		return "Carrito [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+		return "Carrito: " + getLista_productos();
 	}
 }

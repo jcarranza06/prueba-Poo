@@ -23,10 +23,14 @@ public class Cliente {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public Cliente(Carrito carrito, String nombre, int id) {
+		this.carrito = carrito;
+		this.id = id;
+		this.nombre = nombre;
+		
+	}
 	@Override
 	public String toString() {
-		return "Cliente [carrito=" + carrito + ", nombre=" + nombre + ", id=" + id + ", getCarrito()=" + getCarrito()
-				+ ", getNombre()=" + getNombre() + ", getId()=" + getId() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Nombre: "+ getNombre() +"\n"+ "id: "+ getId() +"\n"+ "Carrito: "+ getCarrito();
 	}
 }

@@ -15,4 +15,9 @@ public class Calzado extends Indumentaria{
 		this.tipo = tipo;
 	}
 
+	@Override
+	public String toString() {
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id: "+ getId() +"\n"+ "Color: "+ getColor()+"\n"+ "Talla: "+getTalla()+"\n"+ "Genero: "+ getGenero()+"\n"+"Tipo: "+ getTipo();
+	}
+
 }

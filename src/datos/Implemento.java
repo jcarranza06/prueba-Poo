@@ -18,8 +18,7 @@ public class Implemento extends Equipamento {
 
 	@Override
 	public String toString() {
-		return "Implemento [marca=" + marca + ", getMarca()=" + getMarca() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id"+ getId() +"\n"+ "Segmento deportivo: "+ getSegmento_deportivo()+"\n"+ "Marca: "+ getMarca(); 
 	}
 
 }

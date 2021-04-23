@@ -5,11 +5,6 @@ public class Producto {
 	private int precio;
 	private int id;
 	
-	public Producto(String nombre, int precio, int id) {
-		this.nombre = nombre;
-		this.precio = precio;
-		this.id = id;
-	}
 	
 	public String getNombre() {
 		return nombre;
@@ -29,11 +24,14 @@ public class Producto {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public Producto(String nombre, int precio, int id) {
+		this.nombre = nombre;
+		this.precio = precio;
+		this.id = id;
+	}
 	@Override
 	public String toString() {
-		return "producto [nombre=" + nombre + ", precio=" + precio + ", id=" + id + ", getNombre()=" + getNombre()
-				+ ", getPrecio()=" + getPrecio() + ", getId()=" + getId() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id: "+ getId();
 	}
 }
 

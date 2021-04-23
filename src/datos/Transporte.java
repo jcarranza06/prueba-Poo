@@ -17,8 +17,7 @@ public class Transporte extends Equipamento {
 
 	@Override
 	public String toString() {
-		return "Transporte [vehiculo=" + vehiculo + ", getVehiculo()=" + getVehiculo() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id"+ getId() +"\n"+ "Segmento deportivo: "+ getSegmento_deportivo()+"\n"+ "Vehiculo: "+ getVehiculo();
 	}
 
 }

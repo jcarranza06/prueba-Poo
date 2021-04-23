@@ -9,9 +9,9 @@ public class Accesorios extends Indumentaria{
 
 	@Override
 	public String toString() {
-		return " + getColor() + " + getTalla() +" + getTalla() + " + getGenero() +" + getGenero() "+
-				", toString()=" + super.toString() + ", getNombre()=" + getNombre() + ", getPrecio()=" + getPrecio()
-				+ ", getId()=" + getId() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id: "+ getId() +"\n"+ "Color: "+ getColor()+"\n"+ "Talla: "+getTalla();
 	}
+	
+	
 	
 }

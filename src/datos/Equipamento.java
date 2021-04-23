@@ -18,9 +18,7 @@ public class Equipamento extends Producto{
 
 	@Override
 	public String toString() {
-		return "Equipamento [segmento_deportivo=" + segmento_deportivo + ", getSegmento_deportivo()="
-				+ getSegmento_deportivo() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+		return "Nombre: "+ getNombre() + "\n" + "Precio: " + getPrecio()+"\n"+ "id"+ getId() +"\n"+ "Segmento deportivo: "+ getSegmento_deportivo();
 	}
 
 }
