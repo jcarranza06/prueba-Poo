@@ -5,7 +5,7 @@ public class Indumentaria extends Producto {
 	private String talla;
 	private String genero;
 	
-	
+	final int numero_local = 202;
 	
 	public String getColor() {
 		return color;
@@ -24,6 +24,9 @@ public class Indumentaria extends Producto {
 	}
 	public void setGenero(String genero) {
 		this.genero = genero;
+	}
+	public void ubicacion() {
+		System.out.println("Estoy en el local numero: "+ numero_local);
 	}
 	public Indumentaria(String nombre, int precio, int id, String color, String talla, String genero) {
 		super(nombre,precio,id);

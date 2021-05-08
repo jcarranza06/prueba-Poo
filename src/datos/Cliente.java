@@ -29,6 +29,9 @@ public class Cliente {
 		this.nombre = nombre;
 		
 	}
+	public final void saludo() {
+		System.out.println("Saludos :3 tengo la plata que tu quieres");
+	}
 	@Override
 	public String toString() {
 		return "Nombre: "+ getNombre() +"\n"+ "id: "+ getId() +"\n"+ "Carrito: "+ getCarrito();
