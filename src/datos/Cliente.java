@@ -29,6 +29,14 @@ public class Cliente {
 		this.nombre = nombre;
 		
 	}
+
+	public Cliente(String nombre, int id) {
+		this.carrito = null;
+		this.id = id;
+		this.nombre = nombre;
+		
+	}
+
 	public final void saludo() {
 		System.out.println("Saludos :3 tengo la plata que tu quieres");
 	}

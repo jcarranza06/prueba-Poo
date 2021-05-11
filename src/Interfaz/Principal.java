@@ -3,8 +3,10 @@ package Interfaz;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.TreeSet;
 import java.util.Scanner;
 import datos.Carrito;
+import datos.Cliente;
 import datos.Equipamento;
 import datos.Indumentaria;
 import datos.Producto;
@@ -51,9 +53,27 @@ public class Principal {
 		}
 	}
 
-	public static void consultarProductos(HashSet<Deporte> deportes){
+	public static void consultarDeportes(TreeSet<Deporte> deportes){
 		System.out.println("Deportes: \n");
 		Iterator<Deporte> it = deportes.iterator();
+     	while(it.hasNext()){
+        	System.out.println(it.next().getNombre());
+     	}
+		System.out.println();
+	}
+
+	public static void consultarBodegaEquipamiento(HashSet<Equipamento> bodega){
+		System.out.println("Deportes: \n");
+		Iterator<Equipamento> it = bodega.iterator();
+     	while(it.hasNext()){
+        	System.out.println(it.next().getNombre());
+     	}
+		System.out.println();
+	}
+
+	public static void consultarBodegaIndumentaria(HashSet<Indumentaria> bodega){
+		System.out.println("Deportes: \n");
+		Iterator<Indumentaria> it = bodega.iterator();
      	while(it.hasNext()){
         	System.out.println(it.next().getNombre());
      	}
@@ -126,11 +146,11 @@ public class Principal {
 		carrito.addItem(productosCliente.get(elemento));
 		//System.out.println(productosCliente.get(elemento).getClass().getSimpleName());
 	}
-	/*
-	public static void verCarrito(Carrito carrito){
-		carrito.getLista_productos();
+	
+	public static void asignarCarrito(Cliente cliente, Carrito carrito) {
+		cliente.setCarrito(carrito);
 	}
-	*/
+
 	public static void mostrarError() {
 		System.out.println("Entrada Invalida");
 	}

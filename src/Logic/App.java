@@ -4,18 +4,17 @@ import datos.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-
+import java.util.TreeSet;
 import Interfaz.*;
+
 public class App {
 	 public static void main(String[] args) throws Exception {
-		 System.out.println("hola mundo");
 		 Principal.Bienvenida();
 
 		 HashMap<String, Equipamento> productoEquipamiento = new HashMap<String, Equipamento>();
 		 HashMap<String, Indumentaria> productoIndumentaria = new HashMap<String, Indumentaria>();
 
-		 HashSet<Deporte> deportes = new HashSet<Deporte>();
-
+		 TreeSet<Deporte> deportes = new TreeSet<Deporte>();
 		 HashSet<Equipamento> bodegaEquipamiento = new HashSet<Equipamento>();
 		 HashSet<Indumentaria> bodegaIndumentaria = new HashSet<Indumentaria>();
 
@@ -74,14 +73,7 @@ public class App {
 		 Accesorios munequera = new Accesorios("Muñequera terapéutica Met", 70000, 20, "Negro", "Ajustable", "Unisex");
 		 Accesorios gafasDeportivas = new Accesorios("Gafas UV Reflector Ray Ban", 18000, 21, "Blanco-Naranja", "Ajustable", "Unisex");
 
-		 //productoIndumentaria.put("UndArmBlu", blusaDeportiva);
-
 		 //Llenando Estantes
-		 
-		 
-		 productos.add(balonGolty);
-		 productos.add(raquetaWilson);
-		 productos.add(balonWilson);
 		 //Añadiéndolo a su respectivo estante
 		 productoEquipamiento.put("balGol",balonGolty);
 		 productoEquipamiento.put("raqWil",raquetaWilson);
@@ -143,9 +135,10 @@ public class App {
 		}
 
 		 //Clientes
-		 Carrito DeMario = new Carrito();
-		 Cliente Mario = new Cliente(DeMario, "Mario", 805694752);
-
+		 
+		 Cliente Mario = new Cliente("Mario Alfonso", 805694752);
+		 Carrito carritoMario = new Carrito(10, Mario);
+		 Principal.asignarCarrito(Mario, carritoMario);
 
 		 int entrada = 0;
 		 while (entrada!=3){//ciclo menu principal
@@ -160,9 +153,12 @@ public class App {
 			 if (entrada == 1) {//entrada al menu de consulta
 				 while (entradaMenuConsulta != 2) {//ciclo menu consulta
 					 //Principal.consultarProductos(productos);//mostrar todos los productos de la tienda
+					 //Falta menú
 					 Principal.consultarProductos(productoIndumentaria);
 					 Principal.consultarProductosEquipamiento(productoEquipamiento);
-					 Principal.consultarProductos(deportes);
+					 Principal.consultarDeportes(deportes);
+					 Principal.consultarBodegaEquipamiento(bodegaEquipamiento);
+					 Principal.consultarBodegaIndumentaria(bodegaIndumentaria);
 					 Principal.menuConsulta();
 					 entradaMenuConsulta = Principal.EntradaMenu();
 					 if (entradaMenuConsulta == 1) {
@@ -200,7 +196,7 @@ public class App {
 									switch (anadir){
 										case 1:
 											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteImplemento, DeMario, opcion);
+											Principal.addCarrito(estanteImplemento, carritoMario, opcion);
 											break;
 										case 2:
 											continue;
@@ -216,7 +212,7 @@ public class App {
 									switch (anadir){
 										case 1:
 											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteTransporte, DeMario, opcion);
+											Principal.addCarrito(estanteTransporte, carritoMario, opcion);
 											break;
 										case 2:
 											continue;
@@ -232,7 +228,7 @@ public class App {
 									switch (anadir){
 										case 1:
 											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteProteccion, DeMario, opcion);
+											Principal.addCarrito(estanteProteccion, carritoMario, opcion);
 											break;
 										case 2:
 											continue;
@@ -248,7 +244,7 @@ public class App {
 									switch (anadir){
 										case 1:
 											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteTrenSup, DeMario, opcion);
+											Principal.addCarrito(estanteTrenSup, carritoMario, opcion);
 											break;
 										case 2:
 											continue;
@@ -264,7 +260,7 @@ public class App {
 									switch (anadir){
 										case 1:
 											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteTrenInf, DeMario, opcion);
+											Principal.addCarrito(estanteTrenInf, carritoMario, opcion);
 											break;
 										case 2:
 											continue;
@@ -280,7 +276,7 @@ public class App {
 									switch (anadir){
 										case 1:
 											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteCalzado, DeMario, opcion);
+											Principal.addCarrito(estanteCalzado, carritoMario, opcion);
 											break;
 										case 2:
 											continue;
@@ -296,7 +292,7 @@ public class App {
 									switch (anadir){
 										case 1:
 											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteAccesorios, DeMario, opcion);
+											Principal.addCarrito(estanteAccesorios, carritoMario, opcion);
 											break;
 										case 2:
 											continue;
@@ -311,7 +307,7 @@ public class App {
 
 					 }else if (entradaMenuCompra ==2) {
 						 //ver el carrito
-						 System.out.println(DeMario);
+						 System.out.println(carritoMario);
 						 System.out.println("en construccion");
 					 }else if (entradaMenuCompra == 3) {
 						 //volver
