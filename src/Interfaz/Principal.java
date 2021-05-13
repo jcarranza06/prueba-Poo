@@ -31,10 +31,12 @@ public class Principal {
 	public static int EntradaMenu (){
         try {
         	Scanner sc = new Scanner(System.in);
+        	sc.close();
         	int elegido = sc.nextInt();
         	return elegido;}
         catch (Exception e) {
         	return -1;
+
         }
     }
 	public static void consultarProductos(ArrayList<Producto> productos) {
