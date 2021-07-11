@@ -14,7 +14,7 @@ public class App {
 		 HashMap<String, Equipamento> productoEquipamiento = new HashMap<String, Equipamento>();
 		 HashMap<String, Indumentaria> productoIndumentaria = new HashMap<String, Indumentaria>();
 
-		 TreeSet<Deporte> deportes = new TreeSet<Deporte>();
+		 //TreeSet<Deporte> deportes = new TreeSet<Deporte>();
 		 HashSet<Equipamento> bodegaEquipamiento = new HashSet<Equipamento>();
 		 HashSet< Indumentaria> bodegaIndumentaria = new HashSet<Indumentaria>();
 
@@ -37,13 +37,13 @@ public class App {
 		 Deporte baloncesto = new Deporte("baloncesto", "Deporte en equipo de pelota");
 		 Deporte ciclismo = new Deporte("ciclismo", "Deporte de velocípedo");
 		 Deporte patinaje = new Deporte("Patinaje", "Deporte de patines o similares");
-
+/*
 		 deportes.add(futbol);
 		 deportes.add(tennis);
 		 deportes.add(natacion);
 		 deportes.add(baloncesto);
 		 deportes.add(ciclismo);
-		 deportes.add(patinaje);
+		 deportes.add(patinaje);*/
 		
 		 Implemento balonGolty = new Implemento("Balon talla 8", 30000, 1, futbol,"Grande","Amarillo", "Golty","Pierna","Cuero");
 		 Implemento raquetaWilson = new Implemento("Raqueta Wilson Roger Federer", 95000, 2, tennis,"Pequena", "Blanca","Wilson","Mano","Cuero");
@@ -139,7 +139,8 @@ public class App {
 		 Cliente Mario = new Cliente("Mario Alfonso", 805694752);
 		 Carrito carritoMario = new Carrito(10, Mario);
 		 Principal.asignarCarrito(Mario, carritoMario);
-
+		 
+		 
 		 int entrada = 0;
 		 while (entrada!=3){//ciclo menu principal
 			 int entradaMenuConsulta = 0;
@@ -156,7 +157,7 @@ public class App {
 					 //Falta menú
 					 Principal.consultarProductos(productoIndumentaria);
 					 Principal.consultarProductosEquipamiento(productoEquipamiento);
-					 Principal.consultarDeportes(deportes);
+					 //Principal.consultarDeportes(deportes);
 					 Principal.consultarBodegaEquipamiento(bodegaEquipamiento);
 					 Principal.consultarBodegaIndumentaria(bodegaIndumentaria);
 					 Principal.menuConsulta();
@@ -306,7 +307,7 @@ public class App {
 						 }
 
 					 }else if (entradaMenuCompra ==2) {
-						 //ver el carrito
+						 //ver el carrito2
 						 System.out.println(carritoMario);
 						 System.out.println("en construccion");
 					 }else if (entradaMenuCompra == 3) {

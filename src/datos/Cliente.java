@@ -42,6 +42,6 @@ public class Cliente {
 	}
 	@Override
 	public String toString() {
-		return "Nombre: "+ getNombre() +"\n"+ "id: "+ getId() +"\n"+ "Carrito: "+ getCarrito();
+		return "Nombre: "+ getNombre() +"\n"+ "id: "+ getId();
 	}
 }

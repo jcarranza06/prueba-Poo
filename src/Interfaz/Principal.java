@@ -31,7 +31,7 @@ public class Principal {
 	public static int EntradaMenu (){
         try {
         	Scanner sc = new Scanner(System.in);
-        	sc.close();
+        	//sc.close();
         	int elegido = sc.nextInt();
         	return elegido;}
         catch (Exception e) {
@@ -151,6 +151,8 @@ public class Principal {
 	
 	public static void asignarCarrito(Cliente cliente, Carrito carrito) {
 		cliente.setCarrito(carrito);
+		carrito.setCliente(cliente);
+		
 	}
 
 	public static void mostrarError() {
