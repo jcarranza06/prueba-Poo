@@ -140,7 +140,6 @@ public class App {
 		 Carrito carritoMario = new Carrito(10, Mario);
 		 Principal.asignarCarrito(Mario, carritoMario);
 		 
-		 
 		 int entrada = 0;
 		 while (entrada!=3){//ciclo menu principal
 			 int entradaMenuConsulta = 0;
@@ -155,17 +154,30 @@ public class App {
 				 while (entradaMenuConsulta != 2) {//ciclo menu consulta
 					 //Principal.consultarProductos(productos);//mostrar todos los productos de la tienda
 					 //Falta menú
-					 Principal.consultarProductos(productoIndumentaria);
-					 Principal.consultarProductosEquipamiento(productoEquipamiento);
+					 //Principal.consultarProductos(productoIndumentaria);
+					 //Principal.consultarProductosEquipamiento(productoEquipamiento);
 					 //Principal.consultarDeportes(deportes);
 					 Principal.consultarBodegaEquipamiento(bodegaEquipamiento);
 					 Principal.consultarBodegaIndumentaria(bodegaIndumentaria);
 					 Principal.menuConsulta();
+					 
 					 entradaMenuConsulta = Principal.EntradaMenu();
 					 if (entradaMenuConsulta == 1) {
-						 Principal.menuConsultarProductoEspecifico();
-						 int productoConsulta = Principal.EntradaMenu();
-						 Principal.consultarProductos(productos, productoConsulta);// se consulta el producto por su index de la lista productos 
+						 Principal.menuConsultarProductoEspecificoNombre();
+						 //int productoConsulta = Principal.EntradaMenu();
+						 //Principal.consultarProductos(productos, productoConsulta);// se consulta el producto por su index de la lista productos 
+						 String entradaPorNombre = Principal.EntradaMenuString();
+						 Principal.devolverPorNombre(estanteImplemento, entradaPorNombre);
+						 Principal.devolverPorNombre(estanteTransporte, entradaPorNombre);
+						 Principal.devolverPorNombre(estanteProteccion, entradaPorNombre);
+						 Principal.devolverPorNombre(estanteTrenInf, entradaPorNombre);
+						 Principal.devolverPorNombre(estanteTrenSup, entradaPorNombre);
+						 Principal.devolverPorNombre(estanteCalzado, entradaPorNombre);
+						 Principal.devolverPorNombre(estanteAccesorios, entradaPorNombre);
+						 
+						 entradaMenuConsulta =2;
+						 continue;
+						 
 					 }else if (entradaMenuConsulta == 2) {
 						 //volver
 						 continue;
@@ -185,131 +197,88 @@ public class App {
 						 //elegir productos para el carrito
 						 while (entradaSeccion != 8) {
 					        Principal.menuEstanterias();
+					        entradaSeccion = 8;
 					        entradaSeccion = Principal.EntradaMenu();
+					        
+					        ArrayList<Producto> estanteParaSeleccion = new ArrayList<Producto>();
+					        boolean eleg = false;
 					        switch (entradaSeccion) {
-					            case 1:
-					                Principal.consultarProductos(estanteImplemento);
-									Principal.menuConsultarProductoEspecifico();
-									int opcion = Principal.EntradaMenu();
-									Principal.consultarProductos(estanteImplemento, opcion);
-									Principal.opcionAdd();
-									int anadir = Principal.EntradaMenu();
-									switch (anadir){
-										case 1:
-											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteImplemento, carritoMario, opcion);
-											break;
-										case 2:
-											continue;
-									}
-									break;
-					            case 2:
-					                Principal.consultarProductos(estanteTransporte);
-									Principal.menuConsultarProductoEspecifico();
-									opcion = Principal.EntradaMenu();
-									Principal.consultarProductos(estanteTransporte, opcion);
-									Principal.opcionAdd();
-									anadir = Principal.EntradaMenu();
-									switch (anadir){
-										case 1:
-											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteTransporte, carritoMario, opcion);
-											break;
-										case 2:
-											continue;
-									}
-									break;
-					            case 3:
-					                Principal.consultarProductos(estanteProteccion);
-									Principal.menuConsultarProductoEspecifico();
-									opcion = Principal.EntradaMenu();
-									Principal.consultarProductos(estanteProteccion, opcion);
-									Principal.opcionAdd();
-									anadir = Principal.EntradaMenu();
-									switch (anadir){
-										case 1:
-											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteProteccion, carritoMario, opcion);
-											break;
-										case 2:
-											continue;
-									}
-									break;
-					            case 4:
-					                Principal.consultarProductos(estanteTrenSup);
-									Principal.menuConsultarProductoEspecifico();
-									opcion = Principal.EntradaMenu();
-									Principal.consultarProductos(estanteTrenSup, opcion);
-									Principal.opcionAdd();
-									anadir = Principal.EntradaMenu();
-									switch (anadir){
-										case 1:
-											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteTrenSup, carritoMario, opcion);
-											break;
-										case 2:
-											continue;
-									}
-									break;
-					            case 5:
-					                Principal.consultarProductos(estanteTrenInf);
-									Principal.menuConsultarProductoEspecifico();
-									opcion = Principal.EntradaMenu();
-									Principal.consultarProductos(estanteTrenInf, opcion);
-									Principal.opcionAdd();
-									anadir = Principal.EntradaMenu();
-									switch (anadir){
-										case 1:
-											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteTrenInf, carritoMario, opcion);
-											break;
-										case 2:
-											continue;
-									}
-									break;
-					            case 6:
-					                Principal.consultarProductos(estanteCalzado);
-									Principal.menuConsultarProductoEspecifico();
-									opcion = Principal.EntradaMenu();
-									Principal.consultarProductos(estanteCalzado, opcion);
-									Principal.opcionAdd();
-									anadir = Principal.EntradaMenu();
-									switch (anadir){
-										case 1:
-											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteCalzado, carritoMario, opcion);
-											break;
-										case 2:
-											continue;
-									}
-									break;
-					            case 7:
-					                Principal.consultarProductos(estanteAccesorios);
-									Principal.menuConsultarProductoEspecifico();
-									opcion = Principal.EntradaMenu();
-									Principal.consultarProductos(estanteAccesorios, opcion);
-									Principal.opcionAdd();
-									anadir = Principal.EntradaMenu();
-									switch (anadir){
-										case 1:
-											//DeMario.addItem(estanteImplemento.get(opcion-1));
-											Principal.addCarrito(estanteAccesorios, carritoMario, opcion);
-											break;
-										case 2:
-											continue;
-									}
-									break;
-					            case 8:
-					                continue;
-								default:
-									System.out.println("Opción inválida");
+					        case 1:
+					        	estanteParaSeleccion = estanteImplemento;
+					        	eleg = true;
+					        	break;
+					        case 2:
+					        	estanteParaSeleccion = estanteTransporte;
+					        	eleg = true;
+					        	break;
+					        case 3:
+					        	estanteParaSeleccion = estanteProteccion;
+					        	eleg = true;
+					        	break;
+					        case 4:
+					        	estanteParaSeleccion = estanteTrenSup;
+					        	eleg = true;
+					        	break;
+					        case 5:
+					        	estanteParaSeleccion = estanteTrenInf;
+					        	eleg = true;
+					        	break;
+					        case 6:
+					        	estanteParaSeleccion = estanteCalzado;
+					        	eleg = true;
+					        	break;
+					        case 7:
+					        	estanteParaSeleccion = estanteAccesorios;
+					        	eleg = true;
+					        	break;
+					        case 8:
+					        	
+					        	continue;
+					        	
+					        default:
+					        	System.out.println("Opción inválida");
 					        }
+					        
+					        
+					        if (eleg) {
+					        	Principal.consultarProductos(estanteParaSeleccion);
+					        	Principal.menuConsultarProductoEspecifico();
+					        	int[] opcion = Principal.EntradaMenuS();
+							
+					        	if (opcion.length >= 2) {
+					        		for (int i =0; i< opcion.length ;i++ ) {
+					        			Principal.addCarrito(estanteParaSeleccion, carritoMario, opcion[i]);
+					        		}
+					        		Principal.mensajeExitoso();
+					        	}else {
+					        	try {
+					        	Principal.consultarProductos(estanteParaSeleccion, opcion[0]);
+					        	if (opcion.length > 0) {
+					        		//System.out.println(opcion[0]);
+					        	Principal.opcionAdd();
+					        	int anadir = Principal.EntradaMenu();
+					        	switch (anadir){
+									case 1:
+										//DeMario.addItem(estanteImplemento.get(opcion-1));
+										Principal.addCarrito(estanteParaSeleccion, carritoMario, opcion[0]);
+										break;
+									case 2:
+										continue;
+					        				}
+					        			}}catch(Exception e){
+					        				Principal.mostrarError();
+					        			}
+					        		}
+					        	}
+					        
+					        
+					        entradaSeccion=0;
 						 }
 
 					 }else if (entradaMenuCompra ==2) {
 						 //ver el carrito2
 						 System.out.println(carritoMario);
-						 System.out.println("en construccion");
+						 
 					 }else if (entradaMenuCompra == 3) {
 						 //volver
 						 continue;

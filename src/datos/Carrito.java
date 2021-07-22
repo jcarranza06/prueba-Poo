@@ -39,6 +39,6 @@ public final class Carrito {
 	}
 	@Override
 	public String toString() {
-		return "Carrito: " + getLista_productos() +"\n" + "Cantidad: " + getCantidad()+ "\n" + "Cliente: "+ getCliente();
+		return "Carrito: " + getLista_productos() +"\n \n" + "Cantidad: " + getCantidad()+ "\n \n" + "Cliente: "+ getCliente();
 	}
 }
